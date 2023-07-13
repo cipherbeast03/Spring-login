@@ -3,6 +3,7 @@ import './App.css';
 import LoginPage from './login/login';
 import RegistrationForm from './registration/registration';
 import Customerdetails from './admin/customerdetails';
+import Navbar from './Navbar/navbar';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
             </ul>
           </nav>
         </header>
+        {/* <Navbar /> */}
         <main>
           <h2>Secure and Convenient Online Banking</h2>
           <p>
