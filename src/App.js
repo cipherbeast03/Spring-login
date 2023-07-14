@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import LoginPage from './login/login';
 import RegistrationForm from './registration/registration';
+import HomePage from './home/home';
 import Customerdetails from './admin/customerdetails';
 import Benificiarydetails from './users/benificiary';
 import { NavLink, Routes, Route } from 'react-router-dom';
@@ -37,22 +38,28 @@ function App() {
         </header>
         {/* <Navbar /> */}
         <main>
-          <h2>Secure and Convenient Online Banking</h2>
-          <p>
-            Manage your accounts and perform transactions from the comfort of
-            your home.
-          </p>
-          <NavLink to="/login">
-            <button>Sign In</button>
-          </NavLink>
-          <NavLink to="/registration">
-            <button>Sign In</button>
-          </NavLink>
-          <Routes>
-            <Route path="/login" element={<LoginPage />} />
-            <Route path="/registration" element={<RegistrationForm />} />
-            <Route path="/benificiaries" element={<Benificiarydetails />} />
-          </Routes>
+          <div className="loginsection">
+            <h2>Secure and Convenient Online Banking</h2>
+            <p>
+              Manage your accounts and perform transactions from the comfort of
+              your home.
+            </p>
+            <NavLink to="/login">
+              <button>Sign In</button>
+            </NavLink>
+            <NavLink to="/registration">
+              <button>Sign In</button>
+            </NavLink>
+          </div>
+          <div className="mainsource">
+            <Routes>
+              <Route path="" element={<HomePage />} />
+              <Route path="/login" element={<LoginPage />} />
+              <Route path="/login" element={<LoginPage />} />
+              <Route path="/registration" element={<RegistrationForm />} />
+              <Route path="/benificiaries" element={<Benificiarydetails />} />
+            </Routes>
+          </div>
         </main>
         <benificiarydetails />
         <footer>

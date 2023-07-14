@@ -1,33 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-class HomePage extends React.Component {
-  render() {
-    return (
-      <div>
-        <header>
-          <h1>Welcome to My Bank</h1>
-          <nav>
-            <ul>
-              <li><a href="/">Home</a></li>
-              <li><a href="/accounts">Accounts</a></li>
-              <li><a href="/transactions">Transactions</a></li>
-              <li><a href="/contact">Contact</a></li>
-            </ul>
-          </nav>
-        </header>
-        <main>
-          <h2>Secure and Convenient Online Banking</h2>
-          <p>Manage your accounts and perform transactions from the comfort of your home.</p>
-          <button>Sign In</button>
-          <button>Sign Up</button>
-        </main>
-        <footer>
-          <p>&copy; {new Date().getFullYear()} My Bank. All rights reserved.</p>
-        </footer>
-      </div>
-    );
-  }
-}
+const HomePage = () => {
+  return (
+    <div>
+      <img
+        src="https://media.licdn.com/dms/image/C4D12AQFvR6webwTsKw/article-cover_image-shrink_720_1280/0/1533823206296?e=2147483647&v=beta&t=wZN4Py-PYNTGQa6WCk1HVhivWC8SWcoIYFN1LdI1b9A"
+        width="100%"
+        height="auto"
+      />
+    </div>
+  );
+};
 
-ReactDOM.render(<HomePage />, document.getElementById('root'));
+export default HomePage;

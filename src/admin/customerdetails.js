@@ -22,7 +22,7 @@ const Customerdetails = () => {
 
   return (
     <div>
-      <h1>Data from MySQL Table</h1>
+      <h1>Customer Data Table</h1>
       <table className="table">
         <thead>
           <tr>
