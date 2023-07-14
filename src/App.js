@@ -3,6 +3,7 @@ import './App.css';
 import LoginPage from './login/login';
 import RegistrationForm from './registration/registration';
 import Customerdetails from './admin/customerdetails';
+import Benificiarydetails from './users/benificiary';
 import { NavLink, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -24,7 +25,9 @@ function App() {
                 <a href="/accounts">Accounts</a>
               </li>
               <li>
-                <a href="/transactions">Transactions</a>
+                <NavLink to="/benificiaries">
+                  <a>Benificiaries</a>
+                </NavLink>
               </li>
               <li>
                 <a href="/contact">Contact</a>
@@ -48,10 +51,10 @@ function App() {
           <Routes>
             <Route path="/login" element={<LoginPage />} />
             <Route path="/registration" element={<RegistrationForm />} />
+            <Route path="/benificiaries" element={<Benificiarydetails />} />
           </Routes>
         </main>
-
-        <Customerdetails />
+        <benificiarydetails />
         <footer>
           <p>
             &copy; {new Date().getFullYear()} Omega Banking. All rights
