@@ -3,7 +3,6 @@ import './App.css';
 import LoginPage from './login/login';
 import RegistrationForm from './registration/registration';
 import Customerdetails from './admin/customerdetails';
-import Navbar from './Navbar/navbar';
 
 function App() {
   return (
