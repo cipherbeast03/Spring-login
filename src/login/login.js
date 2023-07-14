@@ -17,7 +17,8 @@ const LoginPage = () => {
 
   const handleLogin = () => {
     console.log(username, password);
-    //   // Create the request payload
+    localStorage.setItem('loggedIn', 'true');
+    // Create the request payload
     //   const payload = {
     //     username: username,
     //     password: password,

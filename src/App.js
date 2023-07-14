@@ -45,10 +45,10 @@ function App() {
               your home.
             </p>
             <NavLink to="/login">
-              <button>Sign In</button>
+              <button>Login</button>
             </NavLink>
             <NavLink to="/registration">
-              <button>Sign In</button>
+              <button>Register</button>
             </NavLink>
           </div>
           <div className="mainsource">
