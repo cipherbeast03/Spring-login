@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import './customerdetails.css';
 
 const Customerdetails = () => {
   const [data, setData] = useState([]);
@@ -9,7 +10,9 @@ const Customerdetails = () => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch('https://reqres.in/api/users?page=2'); // Replace with your API endpoint
+      const response = await fetch(
+        'https://jsonplaceholder.typicode.com/users'
+      ); // Replace with your API endpoint
       const jsonData = await response.json();
       setData(jsonData);
     } catch (error) {
@@ -20,7 +23,7 @@ const Customerdetails = () => {
   return (
     <div>
       <h1>Data from MySQL Table</h1>
-      <table>
+      <table className="table">
         <thead>
           <tr>
             <th>ID</th>
@@ -29,10 +32,10 @@ const Customerdetails = () => {
           </tr>
         </thead>
         <tbody>
-          {data.map(row => (
+          {data.map((row) => (
             <tr key={row.id}>
               <td>{row.id}</td>
-              <td>{row.first_name}</td>
+              <td>{row.name}</td>
               <td>{row.email}</td>
             </tr>
           ))}

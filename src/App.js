@@ -3,6 +3,7 @@ import './App.css';
 import LoginPage from './login/login';
 import RegistrationForm from './registration/registration';
 import Customerdetails from './admin/customerdetails';
+import { NavLink, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
@@ -38,12 +39,19 @@ function App() {
             Manage your accounts and perform transactions from the comfort of
             your home.
           </p>
-          <button>Sign In</button>
-          <button>Sign Up</button>
+          <NavLink to="/login">
+            <button>Sign In</button>
+          </NavLink>
+          <NavLink to="/registration">
+            <button>Sign In</button>
+          </NavLink>
+          <Routes>
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/registration" element={<RegistrationForm />} />
+          </Routes>
         </main>
-        <LoginPage />
-        <RegistrationForm />
-        {/* <Customerdetails/> */}
+
+        <Customerdetails />
         <footer>
           <p>
             &copy; {new Date().getFullYear()} Omega Banking. All rights
